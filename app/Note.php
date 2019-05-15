@@ -12,8 +12,8 @@ class Note extends Model
     {
         return $this->belongsTo('App\User');
     }
-    public function answers()
+    public function question()
     {
-        return $this->hasMany('App\Answer');
+        return $this->belongsTo('App\Question');
     }
 }

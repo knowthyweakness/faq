@@ -29,3 +29,9 @@ Route::delete('/questions/{question_id}/answer/{answer_id}', 'AnswerController@d
 Route::resources([
     'questions' => 'QuestionController',
 ]);
+Route::get('/questions/{question_id}/notes/create', 'NoteController@create')->name('notes.create');
+Route::get('/questions/{question_id}/notes/{note_id}', 'NoteController@show')->name('notes.show');
+Route::get('/questions/{question_id}/notes/{note_id}/edit', 'NoteController@edit')->name('notes.edit');
+Route::post('/questions/{question_id}/notes/', 'NoteController@store')->name('notes.store');
+Route::patch('/questions/{question_id}/note/{note_id}', 'NoteController@update')->name('notes.update');
+Route::delete('/questions/{question_id}/note/{note_id}', 'NoteController@destroy')->name('notes.destroy');
