@@ -11,10 +11,10 @@
                     </div>
                     <div class="card-footer">
                         {{ Form::open(['method'  => 'DELETE', 'route' => ['notes.destroy', $question, $note->id]])}}
-                        <button class="btn btn-danger float-right mr-2" value="submit" type="submit" id="submit">Delete
+                        <button class="btn btn-danger float-left mr-2" value="submit" type="submit" id="submit">Delete
                         </button>
                         {!! Form::close() !!}
-                        <a class="btn btn-primary float-right" href="{{ route('notes.edit',['question_id'=> $question, 'note_id'=> $note->id, ])}}">
+                        <a class="btn btn-primary float-left" href="{{ route('notes.edit',['question_id'=> $question, 'note_id'=> $note->id, ])}}">
                             Edit Note
                         </a>
                     </div>
