@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.8.15 on 2019-05-08 02:06:02.
+ * Generated for Laravel 5.8.17 on 2019-05-15 23:12:42.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -11470,7 +11470,6 @@ namespace Illuminate\Support\Facades {
     /**
      * 
      *
-     * @method static void registerCustomDBALType(string $class, string $name, string $type)
      * @see \Illuminate\Database\Schema\Builder
      */ 
     class Schema {
@@ -11653,6 +11652,20 @@ namespace Illuminate\Support\Facades {
             //Method inherited from \Illuminate\Database\Schema\Builder            
                         /** @var \Illuminate\Database\Schema\SQLiteBuilder $instance */
                         $instance->dropIfExists($table);
+        }
+        
+        /**
+         * Drop all types from the database.
+         *
+         * @return void 
+         * @throws \LogicException
+         * @static 
+         */ 
+        public static function dropAllTypes()
+        {
+            //Method inherited from \Illuminate\Database\Schema\Builder            
+                        /** @var \Illuminate\Database\Schema\SQLiteBuilder $instance */
+                        $instance->dropAllTypes();
         }
         
         /**

@@ -17,7 +17,7 @@ class NoteController extends Controller
     }
     public function create($question)
     {
-        $note = new Answer;
+        $note = new Note;
         $edit = FALSE;
         return view('noteForm', ['note' => $note,'edit' => $edit, 'question' =>$question  ]);
     }
@@ -46,7 +46,7 @@ class NoteController extends Controller
     }
     public function edit($question,  $note)
     {
-        $note = Answer::find($note);
+        $note = Note::find($note);
         $edit = TRUE;
         return view('noteForm', ['note' => $note, 'edit' => $edit, 'question'=>$question ]);
     }
